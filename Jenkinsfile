@@ -1,5 +1,8 @@
 pipeline {
-    agent any
+    agent {
+        docker { image 'php:7.2-cli' }
+    }
+
     stages {
 
         stage('Passos para o MASTER') {
